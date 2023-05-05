@@ -1,0 +1,380 @@
+.camera-main{
+    background-color: $color-body-light;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+.main-wrapper{
+    background-color: white;
+    width: 75%;
+    margin: auto;
+}
+#card{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    max-width: 100%;
+    margin: auto;
+    background-color: $color-body-light;
+    position: relative;
+    #avatar{
+        width:80px;
+        min-width:80px;
+        border-radius: 50%;
+        box-shadow: 1px 1px 1px rgb(200, 200, 200);
+        position: absolute;
+        top:-40px;
+        left: -40px;
+    }
+    .pic_area{
+        grid-template: 1 / 2;
+        grid-row: 1 / 2;
+        text-align: center;
+        height:400px;
+        display: flex;
+        flex-flow:  column wrap;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        background-color: white;
+    }
+    #front{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+}
+#back{
+    background-color: $color-green2;
+}
+#caption,
+#date,
+label{
+    display: block;
+}
+#caption,
+#date,
+#journal{
+    font-family:$font-journal;
+}
+#caption:focus{
+    outline: $color-body-light;
+    // outline: none;
+}
+.imgicon>i{
+    color: $color-yellow1;
+    font-size: 50px;
+    font-weight: 800;
+    font-family: "Font Awesome 5 Free";
+}
+// .pic_area{
+//     text-align: center;
+//     height:400px;
+//     display: flex;
+//     flex-flow:  column wrap;
+//     align-items: center;
+//     justify-content: center;
+//     align-content: center;
+// }
+#image{
+    width: 98%;
+    border: none;
+    font-size: 10px;
+    margin: 0;
+}
+.border,
+#username{
+    border-top: 1px solid $color-body-dark;
+}
+.border{
+    padding-top: .5rem;
+    color: $color-icon-text;
+    padding-left: 2%;
+}
+.caption-header{
+    color: $color-icon-text;
+}
+input{
+    margin: 1rem 0;
+}
+#date{
+    background-color:$color-green4;
+    font-family: $font-journal;
+    font-size: 20px;
+    height: 30px;
+    border: 1px solid;
+    margin-left: 2%;
+}
+.input-area{
+    text-align: left;
+    background-color: $color-green4;
+    border-top: 1px solid $color-body-dark;
+}
+p#username{
+    font-weight: bold;
+    font-size: 25px;
+    color: $color-body-dark;
+    padding-left: 2%;
+}
+#journal,#caption{
+    font-family: $font-journal;
+    font-size: 24px;
+    background-color:$color-green4;
+    width: 98%;
+    margin-left: 2%;
+    border: none;
+    outline: none;
+}
+#journal{
+    height: 100px;
+}
+.caption-header{
+    padding-left: 2%;
+}
+
+
+/* Camera page BUTTONS ===============*/
+.submit{
+    background-color: $color-red2;
+    border-radius: 15px;
+    color: $color-body-light;
+    border: none;
+    font-size: 15px;
+    width: 50%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    
+    
+}
+.submit:hover{
+    background-color: white;
+    border: 2px solid $color-red2;
+    color:  $color-body-dark;
+    font-weight: 200;
+}
+//take a pic butoon
+a.items,a.item{
+    text-decoration: none;
+    background-color: $color-green3;
+    color: white;
+    padding: 7px 1rem;
+    border-radius: 15px;
+    font-size: 15px;
+}
+a.items:hover,
+a.item:hover{
+    background-color: white;
+    border: 2px solid $color-green3;
+    color:  $color-body-dark;
+    padding: 5px 1rem;
+    font-weight: 200;
+}
+//choose file button
+#target{
+    width: 98%;
+    padding: 0 20% ;
+    display: flex;
+    flex-flow: column wrap;
+}
+input#file-upload-button{
+    background-color: $color-green3;
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 15px;
+    font-size: 10px;
+}
+#emoji>p:nth-of-type(1){
+    color:$color-icon-text;
+    border-top: 1px solid $color-body-dark;
+    padding: 2%;
+}
+#emo_subtitle{
+text-align: center;
+margin: 5px;
+color:$color-icon-text;
+}
+#emoji_result{
+    width: 50px;
+    display: flex;
+    flex-flow:row nowrap;
+    img{
+        margin: 4px;
+    }
+}
+#emoji{
+    background-color: $color-green4;
+}
+#emoselection{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    img{
+        width: 40px;
+        margin: 5px;
+    }
+    p{
+        color:$color-icon-text;
+    }
+}
+/* TAKE A PHOTO PAGE =====*/
+#picture.page{
+    padding: 1rem;
+}
+#video,#canvas{
+    width: 98%;
+    margin: 0 auto;
+    max-width: 322px;
+}
+#canvas{
+    display: block;
+}
+.shot-button{
+    text-align: center;
+    margin-top: 10px;
+}
+.item+p{
+    text-align: center;
+    margin-top: .5rem;
+}
+#start,
+#snap{
+    background-color: white;
+    border: 1px solid $color-green3;
+    color:  $color-body-dark;
+    padding: .3rem 1rem;
+    font-weight: 200;
+    border-radius: 15px;
+    font-size: 15px;
+    width: 123px;
+}
+#snap{
+    width: 123.39px;
+}
+#start:hover,
+#snap:hover{
+    background-color: $color-green3;
+    color: white;
+    padding: 4px 1rem;
+}
+a.item{
+    width: 32%;
+    display: block;
+    margin: 1rem auto 2rem auto;
+    text-align: center;
+}
+
+/* BEFORE SUBMIT SCREEN */
+#profile{
+    background-color: $color-body-light;
+}
+#imageSelected{
+    // width: 100%;
+    margin: 5px;
+}
+
+/* SUBMIT SCREEN */
+#back{
+display: grid;
+flex-flow: column wrap;
+background-color: $color-green4;
+#final-img img{
+    width: 100%;
+}
+}
+#final-img{
+    order: -1;
+}
+.titles{
+    color:$color-icon-text ;
+}
+.dates{
+    font-size: 10px;
+    text-align: right;
+}
+.results{
+    padding: 2%;
+    // max-width:90%;
+}
+#emospace{
+    display: flex;
+    flex-flow: row wrap;
+}
+#emospace img{
+    width: 10%;
+}
+.results>p.dates{
+    border-bottom: 1px solid $color-body-dark;
+}
+.results>p:nth-of-type(6){
+    color:$color-icon-text ;
+    border-top: 1px solid $color-body-dark;
+}
+
+
+@media screen and (min-width:800px){
+    .main-wrapper{
+        width: 80%;
+    }
+    
+    
+    
+    
+    
+    
+    #card{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        width: 100%;
+        .pic_area{
+            grid-column: 1 / 2;
+            grid-row: 1 / -1;
+            height: 100%;
+        }
+        #front{
+           grid-column: 2 / 3;
+           grid-row: 1 / -1;
+        }
+        .input-area{
+            border-top: none;
+        }
+    }
+    #avatar{
+        left: 62px;
+        z-index: 1;
+    }
+    #form1{
+        position: relative;
+        margin-bottom: 0;
+    }
+    #image{
+        position: absolute;
+        bottom:5%;
+        right: 100%;
+    }
+    .submit{
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        height: 30px;
+       justify-content: center;
+       margin:1rem auto;
+       max-width: 200px;
+       position: absolute;
+       bottom: -70px;
+       right:30%;
+    }
+    #journal  {
+        // height: 150px;
+        width: 98%;
+    }
+    #username{
+        border-top: none;
+    }
+    ///TAKE a PICTURE PAGE
+    a.item{
+        max-width: 248px;
+    }
+    #back{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+//Submit area
+}
